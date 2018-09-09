@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$name} {$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+	</head>
+<body>
+<tc_include file="Public:navhead"/>
+<div class=" mtb50 clear">
+ 
+<!-- 快速预约 -->
+<div class="listyy-wapper"  >
+<div class="fixed-content">
+ 
+<div class="form">
+<h1>快速预约</h1>
+	<p class="form-p">您选择的条件如下:</p>
+	<p class="select-p">选择地点<php>$getaddress=sp_getaddress();
+	if(isset($_SESSION['address'])){
+		$address=$_SESSION['address'];
+	}else{
+		$address=$getaddress[0]['address'];
+	}
+</php>
+<select  name="address" >
+<foreach name="getaddress" item="vo">
+<if condition="$vo.address eq $address">
+				<option value="{$vo.address}" selected="">{$vo.address}</option>
+				<else /><option value="{$vo.address}" >{$vo.address}</option>
+				</if>
+	
+</foreach>
+ </select>
+</p>
+<p class="select-p">
+	选择桌数<select name="number"><option>10桌以内</option>
+	<option>10-16桌</option>
+	<option>16桌以上</option>
+	</select>
+	</p>
+	<input type="text" name="uname" placeholder="请输入您的姓名">
+<input type="text" name="utel" placeholder="请输入您的手机号">
+<p class="red" id="yy-errormessage"></p>
+<button onclick="addpost('yuyue')">提交预约</button>
+</div>
+
+</div>
+</div>
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+</body>
+</html>
+<script type="text/javascript">
+	function addpost(postname){   
+		$('#yy-errormessage').text('');
+		if(!$('.listyy-wapper input[name=uname]').val()){
+			$('#yy-errormessage').text('姓名不能为空!');
+			return false;
+		}
+		if(!$('.listyy-wapper input[name=utel]').val()){
+			$('#yy-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		  var mobile=$('.listyy-wapper input[name=utel]').val();
+		   var myreg=/^[1][3,4,5,6,7,8,9][0-9]{9}$/;		  
+            if (!myreg.test(mobile)) {
+            	 $('#yy-errormessage').text('请填写正确的手机号!');
+                return false;
+            }  
+
+ 
+		var postdata={
+			full_name:$('.listyy-wapper input[name=uname]').val(),
+			address:$('.listyy-wapper select[name=address]').val(),
+			number:$('.listyy-wapper select[name=number]').val(),
+			tel:$('.listyy-wapper input[name=utel]').val(),
+			from:postname
+
+		}
+		 $.ajax({
+            url:"{:U('user/center/indexformadd')}",
+            type:"POST",
+            data:postdata,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                  alert('提交成功!');
+
+                }else{
+                    alert(data.info);
+                }
+                 location.reload();
+
+            },
+        }); 
+
+
+
+	  
+ }
+ 
+</script>

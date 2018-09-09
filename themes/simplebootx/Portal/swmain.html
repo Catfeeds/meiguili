@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+		<link rel="stylesheet" href="/css/swiper3.0.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/zane-calendar.css">
+		<script src="/js/zane-calendar.js"></script>
+	</head>
+<body>
+<tc_include file="Public:topheader"/>
+<div class="w1200 clear">
+	<div class="index-partone clear">
+		<div class="yugu">
+			<img src="/images/yugu.png" alt="">
+		</div>
+		<div class="index-partone-03">
+			<div class="index-partone-03-r">
+				<img src="/images/index-06.png" id="yuyueclick">
+			</div>
+		</div>
+		<div class="index-partone-04">
+			<ul>
+				<li class="line" id="addressclick">
+					<img src="/images/index-04.png" >
+					<p>发送地址</p>
+				</li>
+				<li id="dateselect">
+					<img src="/images/index-05.png" >
+					<p>查询档期</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<div class="index-title">
+商务馆场<a href="/index.php?m=list&a=index&id=11">查看更多>></a>
+</div>
+<div class="index-cghl clear">
+<ul>
+	<php>
+	$lists = sp_sql_posts_paged("cid:11;order:post_date DESC;where:postadderss='$address'",3);
+	</php>
+   <volist name="lists['posts']" id="vo">
+	<php>
+	$smeta=json_decode($vo['smeta'], true);
+	</php>
+<li>
+	<div class="aimg">
+	  <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+	<if condition="!empty($smeta['thumb'])">
+		<img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
+								<else />
+		<img src="/images/no-data.png">						
+	</if>
+ </a>
+	<span>{$vo.post_title}</span>
+	</div>
+	<p class="class1">优惠:{$vo.youhui}</p>
+	<p class="class2">特色:{$vo.tese}</p>
+	<p class="class3">场地价格:{$vo.jiage}</p>
+	<p class="class4">容纳桌数:{$vo.zhuoshu}</p>
+	<a href="javascript:;" class="clear yuyueclick">预约看馆</a>
+</li>
+				
+				 
+</volist>
+</ul>
+</div>
+<div class="index-title">
+商务案例<a href="/index.php?m=list&a=index&id=14">查看更多>></a>
+</div>
+<div class="index-hlsl clear">
+<div class="swiper-container" id="hlsl-swiper">
+        <div class="swiper-wrapper">
+        <ul class="swiper-slide">
+	<php>
+		$lists = sp_sql_posts_paged_index("cid:14;order:post_date DESC;limit:0,3;where:postadderss='$address'",3);
+	</php>
+ <volist name="lists['posts']" id="vo">
+	<php>
+	$smeta=json_decode($vo['smeta'], true);
+	</php>
+<li>
+	<div class="aimg">
+		 <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+	<if condition="!empty($smeta['thumb'])">
+		<img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
+								<else />
+		<img src="/images/no-data.png">						
+	</if>
+</a>
+	 </div>
+	<span>{$vo.post_title}</span>
+
+
+</li>
+				
+				 
+</volist>
+</ul>
+ <ul class="swiper-slide">
+	<php>
+		$lists = sp_sql_posts_paged_index("cid:14;order:post_date DESC;limit:4,6;where:postadderss='$address'",3);
+	</php>
+ <volist name="lists['posts']" id="vo">
+	<php>
+	$smeta=json_decode($vo['smeta'], true);
+	</php>
+<li>
+	<div class="aimg">
+		 <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+	<if condition="!empty($smeta['thumb'])">
+		<img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
+								<else />
+		<img src="/images/no-data.png">						
+	</if>
+</a>
+	 </div>
+	<span>{$vo.post_title}</span>
+
+
+</li>
+				
+				 
+</volist>
+</ul>			           
+		           
+            </div>
+ 	
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+    </div>
+
+</div>
+<div class="index-title">
+玫瑰里大事件<a href="/index.php?g=portal&m=list&a=index&id=19">查看更多>></a>
+</div>
+<div class="index-hlsl clear">
+ <ul class="swiper-slide">
+	<php>
+		$lists = sp_sql_posts_paged("cid:19,20;order:post_date DESC;;where:postadderss='$address'",3);
+
+	</php>
+ <volist name="lists['posts']" id="vo">
+	<php>
+	$smeta=json_decode($vo['smeta'], true);
+	</php>
+<li>
+	<div class="aimg">
+		 <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+	<if condition="!empty($smeta['thumb'])">
+		<img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
+								<else />
+		<img src="/images/no-data.png">						
+	</if>
+</a>
+	 </div>
+	<span>{$vo.post_title}</span>
+
+
+</li>
+				
+				 
+</volist>
+</ul>
+
+</div>
+<a href="/index.php?m=page&a=index&id=4"><img src="/images/index-ad.png"></a>
+<div class="index-comment-title">
+<span>客户服务中心</span>
+</div>
+<div class="index-comment-con clear">
+<textarea name="msg" class="msg" placeholder="请输入评论"></textarea>
+<p class="red" id="msg-errormessage"></p>
+<div class="index-comment-con-bottom"><img src="/images/index-touxiang.png"><span>Cora</span><button onclick="postmsg()">发布</button></div>
+</div>
+<div class="comment-con">
+<h1>全部评论</h1>
+<ul>
+<foreach name="commentlist" item="vo">
+<li>
+	<div class="dimg">
+	 
+	<if condition="!empty($vo['avatar'])">
+<img src="{:sp_get_user_avatar_url($vo['avatar'])}">
+								<else /><img src="/images/index-touxiang-a.png">								</if>
+		
+	</div>
+	<div class="comlist-r">
+	<h1><span>{$vo.user_nicename}</span> {$vo.createtime}</h1>
+	<p>{$vo.msg}</p>
+	<p class="b-r"><a href="{:U('index/do_like',array('id'=>$vo['id']))}"><i class="fa fa-thumbs-o-up"></i><span class="count">({$vo.post_like})</span></a></p>
+	</div>
+</li>
+        <!-- <tr>
+        <td>{$vo.ccatcode}</td>
+        <td>{$vo.cname}</td>
+        <td>{$vo.name}</td>
+        <td>{$vo.part}</td>
+        <td><a href="{:U('user/contact/doedit',array('id'=>$vo['id']))}">修改</a> </td>
+        </tr> -->
+        </foreach>
+        </ul>
+</div>
+
+<div class="index-title clear">
+品牌介绍<a href="/index.php?m=page&a=index&id=3">查看更多>></a>
+</div>
+<img src="/images/index-aboutad.png" class="mtb50">
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/>
+<tc_include file="Public:yuyue"/>
+</body>
+</html>
+<script src="/js/swiper3.0.js"></script>
+
+ <script>
+ zaneDate({
+			elem:'#checkdatetime',
+			begintime:1514779932000,
+			format:'yyyy-MM-dd',
+			showtime:true
+		})
+
+ $('#yuyueclick,.yuyueclick').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-yuyue').show();
+ });
+  $('#addressclick').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-address').show();
+ });
+    $('#dateselect').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-dangqi').show();
+ });
+ $('.fixed-close').click(function(){
+ 	$(this).parents('.fixed-wapper').hide();
+    $('#index-bg-fixed').hide();
+  });
+  function addpost(postname){   
+	  switch(postname)
+		{
+		case '预约':
+		$('#yy-errormessage').text('');
+		if(!$('#index-yuyue input[name=uname]').val()){
+			$('#yy-errormessage').text('姓名不能为空!');
+			return false;
+		}
+		if(!$('#index-yuyue input[name=utel]').val()){
+			$('#yy-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		var postdata={
+			full_name:$('#index-yuyue input[name=uname]').val(),
+			address:$('#index-yuyue select[name=address]').val(),
+			number:$('#index-yuyue select[name=number]').val(),
+			tel:$('#index-yuyue input[name=utel]').val(),
+			from:'商务'+postname
+
+		}
+		ajaxpost(postdata);		   
+		break;
+		case '地址':
+		$('#address-errormessage').text('');
+		if(!$('#index-address input[name=phone]').val()){
+			$('#address-errormessage').text('手机号不能为空!');
+			return false;
+		}	
+		var postdata={
+			address:$('#index-address select[name=address]').val(),
+			tel:$('#index-address input[name=phone]').val(),
+			from:'商务'+postname
+
+		}
+		ajaxpost(postdata);		
+		  break;
+		  case '日期':
+		  $('#date-errormessage').text('');
+		  if(!$('#index-dangqi input[name=utel]').val()){
+			$('#date-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		if(!$('#index-dangqi input[name=datetime]').val()){
+			$('#date-errormessage').text('请选择日期!');
+			return false;
+		}
+		var postdata={
+			address:$('#index-dangqi select[name=address]').val(),
+			datetime:$('#index-dangqi input[name=datetime]').val(),
+			tel:$('#index-dangqi input[name=utel]').val(),
+			from:'商务'+postname
+
+		}
+		ajaxpost(postdata);	
+		   break;
+		default:
+		  break;
+		}    
+          
+ }
+ function ajaxpost(data){
+ 	  $.ajax({
+            url:"{:U('index/indexformadd')}",
+            type:"POST",
+            data:data,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                alert('提交成功!');                                                            
+                }else{
+                    alert(data.info);
+                }
+                 location.reload();
+
+            },
+        }); 
+ }
+ function postmsg(){
+ 	var msg= $('.msg').val();
+ 	if(!msg){
+ 		$('#msg-errormessage').text('评论内容不能为空!');
+		return false;
+ 	}
+ 	var  data={
+ 		msg:msg
+ 	}
+    $.ajax({
+            url:"{:U('user/center/indexmsgadd')}",
+            type:"POST",
+            data:data,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                alert('提交成功!');                                                            
+                }else{
+                    alert(data.info);
+                }
+                 location.reload();
+
+            },
+        }); 
+
+ }
+    var swiper = new Swiper('#hlsl-swiper', {
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        speed: 600,
+    });
+    </script>

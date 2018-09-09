@@ -1,0 +1,63 @@
+<admintpl file="header" />
+</head>
+<body style="min-width: 800px;">
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Indexyuyueadmin/index')}">预约管理</a></li>
+		</ul>
+		<form class="js-ajax-form" method="post">
+		 
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">ID</th>
+						<th>姓名</th>
+						<th>地址</th>
+						<th width="100">桌数</th>	
+						<th>手机号</th>	
+						<th>档期时间</th>								 
+						<th width="120">预约时间</th>
+					    <th width="120">预约来源</th>
+						<th width="80">操作</th>
+					</tr>
+				</thead>
+				<php>$status=array("1"=>L('AUDITED'),"0"=>L('NOT_AUDITED'));</php>
+				<foreach name="comments" item="vo">
+				<tr>
+					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}"></td>
+					<td>{$vo.id}</td>
+					<td>{$vo.full_name}</td>
+					<td>{$vo.address}</td>
+					<td>{$vo.number}</td> 	
+					<td>{$vo.tel}</td>
+					 <td>{$vo.datetime}</td> 
+					<td>{$vo.createtime}</td>	
+					<td>{$vo.from}</td>	
+				 				
+					<td>
+						<a href="{:U('Commentadmin/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">删除</a>
+					</td>
+				</tr>
+				</foreach>
+				<tfoot>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">ID</th>
+						<th>姓名</th>
+						<th>地址</th>
+						<th width="100">桌数</th>	
+						<th>手机号</th>	
+						<th>档期时间</th>								 
+						<th width="120">预约时间</th>					 
+						<th width="80">操作</th>
+					</tr>
+				</tfoot>
+			</table>
+		 
+			<div class="pagination">{$Page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

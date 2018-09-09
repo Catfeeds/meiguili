@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+	</head>
+<body>
+<tc_include file="Public:navhead"/>
+	<div class="tab-pane">
+	<h1>欢迎登录玫瑰里</h1>
+					<form class="form-horizontal js-ajax-forms" action="{:U('user/login/dologin')}" method="post">
+					<div class="control-group">
+						<input type="text" id="input_username" name="username" placeholder="请输入您的手机号" class="span4">
+					</div>
+
+					<div class="control-group">
+						<input type="password" id="input_password" name="password" placeholder="请输入您的密码" class="span4">
+					</div>
+
+					<div class="control-group">
+						 
+							<input type="text" id="input_verify" name="verify"  placeholder="验证码"  >
+							{:sp_verifycode_img('length=4&font_size=14&width=100&height=34&charset=2345678&use_noise=1&use_curve=0')}
+						 
+						
+					</div>
+
+					<div class="control-group">
+						<button class="btn btn-primary js-ajax-submit span4" type="submit"  >登录</button>
+					</div>
+
+			 
+				</form>
+	</div>
+
+<tc_include file="Public:footer"/> 
+<tc_include file="Public:scripts"/> 
+</body>
+</html>

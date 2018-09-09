@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$name} {$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+		<link rel="stylesheet" type="text/css" href="/css/zane-calendar.css">
+		<script src="/js/zane-calendar.js"></script>
+	</head>
+<body>
+<tc_include file="Public:navhead"/>
+<div class="w1200  clear">
+<img src="/images/list-hlcg-banner.png">
+</div>
+<div class="w1200 mtb50 clear">
+<div class="list-title"><if condition="$cat_id eq 11">商务<else />婚宴</if>场馆宴会厅</div>
+	<div class="list-hycg clear">
+				<php>
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;;where:postadderss='$address'",10);
+				</php>
+				<volist name="lists['posts']" id="vo">
+				<php>
+					$smeta=json_decode($vo['smeta'], true);
+				</php>
+					
+				<div class="list-boxes clear">
+				<div class="list-act-img">
+				 <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+				 <if condition="!empty($smeta['thumb'])">
+					<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" alt="{$vo.post_title}">
+					<else />
+				</if>
+				</a>
+				 
+				</div>
+				<div class="list-hycg-r">
+				 
+					<h2>{$vo.post_title}</h2>
+					<p>{$vo.post_excerpt}</p> 
+					<ul><li>
+						<img src="/images/list-hlcg-icon1.png">最大容纳:{$vo.max}人
+					</li><li>
+						<img src="/images/list-hlcg-icon2.png">厅高:{$vo.tinggao}
+					</li><li>
+						<img src="/images/list-hlcg-icon3.png">起订桌数:{$vo.zhuoshu}
+					</li></ul>
+					<div class="act-icons-time">
+						<a href="javascript:;" class="color1 yuyueclick">预约看馆</a>
+						<a href="javascript:;" class="color1 dateselect">查询档期</a>
+					</div>
+				 </div>
+				</div>
+				
+				</volist>
+				
+			</div>
+			<div class="pagination"><ul>{$lists['page']}</ul></div>
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+<tc_include file="Public:yuyue"/>
+</body>
+</html>
+<script>
+var getNamemainnav='{$_SESSION["mainnav"]}';
+
+ zaneDate({
+			elem:'#checkdatetime',
+			begintime:1514779932000,
+			format:'yyyy-MM-dd',
+			showtime:true
+		})
+ $('.yuyueclick').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-yuyue').show();
+ });
+    $('.dateselect').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-dangqi').show();
+ });
+ $('.fixed-close').click(function(){
+ 	$(this).parents('.fixed-wapper').hide();
+    $('#index-bg-fixed').hide();
+  });
+  function addpost(postname){   
+  	var getName='婚礼';
+  	if(getNamemainnav==2){
+  		getName='商务';
+  	}
+	  switch(postname)
+		{
+		case '预约':
+		$('#yy-errormessage').text('');
+		if(!$('#index-yuyue input[name=uname]').val()){
+			$('#yy-errormessage').text('姓名不能为空!');
+			return false;
+		}
+		if(!$('#index-yuyue input[name=utel]').val()){
+			$('#yy-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		var postdata={
+			full_name:$('#index-yuyue input[name=uname]').val(),
+			address:$('#index-yuyue select[name=address]').val(),
+			number:$('#index-yuyue select[name=number]').val(),
+			tel:$('#index-yuyue input[name=utel]').val(),
+			from:getName+postname
+
+		}
+		ajaxpost(postdata);		   
+		break;
+		case '地址':
+		$('#address-errormessage').text('');
+		if(!$('#index-address input[name=phone]').val()){
+			$('#address-errormessage').text('手机号不能为空!');
+			return false;
+		}	
+		var postdata={
+			address:$('#index-address select[name=address]').val(),
+			tel:$('#index-address input[name=phone]').val(),
+			from:getName+postname
+
+		}
+		ajaxpost(postdata);		
+		  break;
+		  case '日期':
+		  $('#date-errormessage').text('');
+		  if(!$('#index-dangqi input[name=utel]').val()){
+			$('#date-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		if(!$('#index-dangqi input[name=datetime]').val()){
+			$('#date-errormessage').text('请选择日期!');
+			return false;
+		}
+		var postdata={
+			address:$('#index-dangqi select[name=address]').val(),
+			datetime:$('#index-dangqi input[name=datetime]').val(),
+			tel:$('#index-dangqi input[name=utel]').val(),
+			from:getName+postname
+
+		}
+		ajaxpost(postdata);	
+		   break;
+		default:
+		  break;
+		}    
+          
+ }
+ function ajaxpost(data){
+ 	  $.ajax({
+            url:"{:U('index/indexformadd')}",
+            type:"POST",
+            data:data,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                alert('提交成功!');                                                            
+                }else{
+                    alert(data.info);
+                }
+                 location.reload();
+
+            },
+        }); 
+ }
+
+
+    </script>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$post_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+		<link rel="stylesheet" href="/css/swiper.min.css">
+	</head>
+<body>
+<tc_include file="Public:topheader"/>
+<div class="w1200 mtb50 clear">
+<div class="anli-title clear">{$post_title}</div>
+<div class="anli-arc-left">
+<div class="anli-arc-des">
+	{$post_excerpt}
+</div>
+<div class="anli-arc-pic">
+ <php>
+$photo = $smeta[photo];
+</php>
+<if condition="$photo">
+<div class="pc-slide">
+	<div class="view">
+		<div class="swiper-container">
+			<a class="arrow-left" href="#"></a>
+			<a class="arrow-right" href="#"></a>
+			<div class="swiper-wrapper">
+			<foreach name="photo" item="vo">
+            <div class="swiper-slide">
+				<img src="{:sp_get_asset_upload_path($vo['url'])}" alt="{$vo.alt}"> 
+				</div> 
+			</foreach>
+ 				 
+			</div>
+		</div>
+	</div>
+	<div class="preview">
+		<a class="arrow-left" href="#"></a>
+		<a class="arrow-right" href="#"></a>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<foreach name="photo" item="vo">
+            <div class="swiper-slide  <if condition=" $key eq 0"> active-nav </if> " >
+				<img src="{:sp_get_asset_upload_path($vo['url'])}" alt="{$vo.alt}"> 
+				</div> 
+			</foreach>
+			</div>
+		</div>
+	</div>
+</div>
+</if>
+ 
+	 
+</div>
+
+</div>
+<div class="anli-arc-right">
+<div class="tit">案例介绍</div>
+{$post_content}
+</div>
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+</body>
+</html>
+ <script src="/js/swiper.js"></script>
+<script>
+var viewSwiper = new Swiper('.view .swiper-container', {
+	on:{
+		slideChangeTransitionStart: function() {
+		    updateNavPosition()
+	    }
+	}
+})
+
+$('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
+	e.preventDefault()
+	if (viewSwiper.activeIndex == 0) {
+		viewSwiper.slideTo(viewSwiper.slides.length - 1, 1000);
+		return
+	}
+	viewSwiper.slidePrev()
+})
+$('.view .arrow-right,.preview .arrow-right').on('click', function(e) {
+	e.preventDefault()
+	if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+		viewSwiper.slideTo(0, 1000);
+		return
+	}
+	viewSwiper.slideNext()
+})
+
+var previewSwiper = new Swiper('.preview .swiper-container', {
+	//visibilityFullFit: true,
+	slidesPerView: 'auto',
+	allowTouchMove: false,
+	on:{
+		tap: function() {
+		    viewSwiper.slideTo(previewSwiper.clickedIndex)
+	  }
+	}
+})
+
+function updateNavPosition() {
+		$('.preview .active-nav').removeClass('active-nav')
+		var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+		if (!activeNav.hasClass('swiper-slide-visible')) {
+			if (activeNav.index() > previewSwiper.activeIndex) {
+				var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+				previewSwiper.slideTo(activeNav.index() - thumbsPerNav)
+			} else {
+				previewSwiper.slideTo(activeNav.index())
+			}
+		}
+	}
+</script>

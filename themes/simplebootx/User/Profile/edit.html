@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>{$site_seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$site_seo_keywords}" />
+    <meta name="description" content="{$site_seo_description}">
+    <tc_include file="Public:head" />
+  </head>
+<body>
+<tc_include file="Public:navhead"/>
+  <div class="w1200 clear">
+  <div class="center-left">
+   <tc_include file="Public:usernav"/>
+  </div>
+  <div class="center-right">
+   <ul class="centernav nav-tabs">
+                                   <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-list-alt"></i> 修改资料</a></li>
+                               </ul>
+     <div class="tab-pane">
+
+                                      <form class="form-horizontal js-ajax-form" action="{:U('profile/edit_post')}" method="post">
+                                        <div class="control-group">
+                                          
+                                          <div class="controls">
+                                            <input type="text" id="input-user_nicename" placeholder="昵称" name="user_nicename" value="{$user_nicename}">
+                                          </div>
+                                        </div>
+                                        <div class="control-group">
+                                         
+                                          <div class="controls">
+                                            <php>
+                                            $sexs=array("0"=>"请选择性别","1"=>"男","2"=>"女");
+                                            </php>
+                                            <select id="input-sex" name="sex">
+
+                                            <foreach name="sexs" item="vo">
+                                              <php>$sexselected=$key==$sex?"selected":"";</php>
+
+                                                <option value="{$key}" {$sexselected}>{$vo}</option>
+                                              </foreach>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="control-group">
+                                          
+                                          <div class="controls">
+                                            <input class="js-date" type="text" id="input-birthday" placeholder="生日" name="birthday" value="{$birthday}">
+                                          </div>
+                                        </div>
+                                    <!--     <div class="control-group">
+                                          <label class="control-label" for="input-user_url">个人网址</label>
+                                          <div class="controls">
+                                            <input type="text" id="input-user_url" placeholder="http://玫瑰里.com" name="user_url" value="{$user_url}">
+                                          </div>
+                                        </div>
+                                        <div class="control-group">
+                                          <label class="control-label" for="input-signature">个性签名</label>
+                                          <div class="controls">
+                                            <textarea id="input-signature" placeholder="个性签名" name="signature">{$signature}</textarea>
+                                          </div>
+                                        </div> -->
+                                        <div class="control-group">
+                                          <div class="controls">
+                                            <button type="submit" class="btn js-ajax-submit">保存</button>
+                                          </div>
+                                        </div>
+                                      </form>
+                                   </div>
+  </div>
+    
+  </div>
+
+<tc_include file="Public:footer"/> 
+<tc_include file="Public:scripts"/> 
+</body>
+</html>

@@ -1,0 +1,47 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('setting/setaddress')}">添加地址</a></li>
+			<li  class="active"><a href="{:U('setting/addresslist')}">地址列表</a></li>
+		</ul>
+		 <form class="js-ajax-form" method="post">
+		 
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">ID</th>
+						<th width="100">地址名称</th>									 						
+						<th width="80">操作</th>
+					</tr>
+				</thead>
+				<php>$status=array("1"=>L('AUDITED'),"0"=>L('NOT_AUDITED'));</php>
+				<foreach name="addresslist" item="vo">
+				<tr>
+					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}"></td>
+					<td>{$vo.id}</td>
+					<td>{$vo.address}</td> 								
+					<td>
+						<a href="{:U('setting/addressdelete',array('id'=>$vo['id']))}" class="js-ajax-delete">删除</a>
+					</td>
+				</tr>
+				</foreach>
+				<tfoot>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">ID</th>
+						<th width="100">地址名称</th>									 
+						
+						<th width="80">操作</th>
+					</tr>
+				</tfoot>
+			</table>
+		 
+			<div class="pagination">{$Page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

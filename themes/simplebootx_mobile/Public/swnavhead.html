@@ -1,0 +1,34 @@
+<div class="navheader">
+	<div class="w1200 clear">
+		<div class="pright" id="center-login">
+		<span class="login"><a href="{:U('user/center/index')}">个人中心</a><a href="{:U('user/index/logout')}">退出</a> </span>
+<span class="offline"><a href="{:leuu('user/login/index')}">登录</a>|<a href="{:leuu('user/register/index')}">注册</a></span>
+		</div>
+	</div>
+</div>
+<div class="nav-header">
+<div class="w1200 clear">
+<div class="header-l">
+<a href="/"><img src="/images/small-logo.png"></a><select name="navaddress" id="navaddress"><option>北京·太阳公元</option>
+	<option>上海·外滩</option>
+	<option>天津·爱琴海</option>
+	<option>南京·外秦淮</option>
+	<option>南京·1865</option></select>
+</div>
+<div class="header-r">
+	<?php
+			$effected_id="main-menu";
+		  	$filetpl="<a href='\$href' target='\$target' data-cid='\$cid'>\$label</a>";
+		  	$foldertpl="<a href='\$href' target='\$target' data-cid='\$cid'>\$label </a>";
+		  	$ul_class="dropdown-menu" ;
+		  	$li_class="" ;
+		  	$style="nav";
+		  	$showlevel=6;
+		  	$dropdown='dropdown';
+		  	echo sp_get_menu(2,$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+		?>
+</div>
+</div>
+</div>
+<div class="mgl-banner"></div>
+ 

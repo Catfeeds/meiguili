@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$post_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+	</head>
+<body>
+<tc_include file="Public:navhead"/>
+<div class="w1200 clear">
+<div class="arc-anli-title">{$post_title}</div>
+ <div class="act-text   clear">
+ <span class="text"><img src="/images/act-icons_01.png">发表时间:{:date('Y/m/d ',strtotime($post_date))}</span>
+<span class="text"><img src="/images/act-icon10.png" style="width:17px">浏览次数:<span class="red">{$post_hits}</span>人</span>
+
+</div>
+<div id="article_content">
+{$post_content}
+</div>
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+</body>
+</html>

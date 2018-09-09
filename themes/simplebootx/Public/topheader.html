@@ -1,0 +1,29 @@
+<tc_include file="Public:navhead"/>
+<link href="__TMPL__Public/css/slippry/slippry.css" rel="stylesheet">        	
+	 
+       
+ <div class="clear"></div>
+<php>
+    if ($_SESSION['address'] == '北京·太阳公元') {
+        $biao = "mgl-banner";
+    } elseif ($_SESSION['address'] == '上海·外滩') {
+        $biao = "sh-banner";
+    } elseif ($_SESSION['address'] == '天津·爱琴海') {
+        $biao = "tj-banner";
+    } elseif ($_SESSION['address'] == '南京·外秦淮') {
+        $biao = "njwq-banner";
+    } elseif ($_SESSION['address'] == '南京·1865') {
+        $biao = "nj-banner";
+    }
+    $home_slides=sp_getslide($biao,$limit=5,$order = "listorder ASC");
+</php>
+
+<ul id="homeslider" class="unstyled">
+    <foreach name="home_slides" item="vo">
+        <li>
+            <a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
+        </li>
+    </foreach>
+</ul>
+
+<div class="clear"></div>

@@ -1,0 +1,92 @@
+*{padding:0px;margin:0px;}
+* html .clearfix{	zoom: 1;}
+*:first-child + html .clearfix{	zoom: 1;}
+body{font:12px '微软雅黑',Verdana,Arial,Tahoma;}
+
+img{border:none; max-width: 100%}
+a{color:#646464;text-decoration:none; }
+a:hover{text-decoration:none;}
+ul{list-style:none;}
+li {list-style-type:none}
+:focus{outline: none;};
+input,select,button{font:12px Verdana,Arial,Tahoma;vertical-align:middle;outline: none;}
+
+h1,h2,h3,h4,h5,h6{font-size:100%;}input.dialog{height:0; height:0; font-size:0; line-height:0; border:none}
+h1{font-size:34px;}h2{font-size:26px;}h3{font-size:18px; }h4{font-size:16px;}h5{font-size:14px;}h6{font-size:12px;}
+input,label,img,th{vertical-align:middle;}.font-fixh{font-family: Georgia,Arial;   font-size: 16px; font-weight: 700;}address,cite,dfn,em,var{font-style:normal;}
+
+  
+input{-webkit-appearance: none;}
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+    -webkit-appearance: none;
+}
+textarea {
+    -webkit-appearance: none;
+}
+ input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;//关于解决输入框背景颜色
+        -webkit-text-fill-color:  #fff
+    }
+html,
+body {
+    margin:0 auto;
+}
+.red{
+	color: #ff0000;
+    font-size: 14px;
+}
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clear {
+    zoom: 1;
+}
+#center-login span.login,#center-login span.offline{
+	display: none;
+}
+#center-login{
+	height: 44px;line-height: 44px;
+text-align: right;	
+}
+
+#center-login a{ margin: 0 5px }
+.footer{ width: 100%; background: #666; color: #999; margin-top: 20px; text-align: center;  padding: 20px  0}
+.footer ul li{ width: 33.3333%; float: left; text-align: center; }
+.footer a{ color: #999 }
+#center-login  #navaddress{
+	border: 1px solid #c9a063; 
+	border-radius: 5px;
+	 outline: none;
+	color: #c9a063; 
+padding: 0 5px ;   
+font-size: 12px;
+float: left; margin: 12px 0 0 5px}
+.nav-header{
+	width: 100%;
+	height: 33px;
+}
+.nav-header ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	line-height: 24px;
+}
+#main-menu li a{color: #c9a063; font-size: 14px;}
+#main-menu li a:hover{
+border-bottom: 2px solid #c9a063;
+}
+#main-menu li.active a{
+	border-bottom: 2px solid #c9a063;
+}
+.main-banner{
+	width: 100%
+}
+.main-banner img{ max-width: 100% }
+.mtb50{
+	margin:50px auto;
+}

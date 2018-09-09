@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$name} {$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+	</head>
+<body>
+<tc_include file="Public:navhead"/>
+<div class="w1200 mtb50 clear">
+ <div class="list-title">玫瑰里大事件</div>
+<div class="mgl-dsj">
+	<ul>
+
+	     		<li <if condition="$cat_id eq 19">class="active"</if>><a href="/index.php?g=portal&m=list&a=index&id=19" >图片</a></li>
+	      	   <li <if condition="$cat_id eq 20">class="active"</if>><a href="/index.php?g=portal&m=list&a=index&id=20" >视频</a></li>	 
+
+	</ul>
+</div>
+	<div class="list-activity">
+				<php>
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;where:postadderss='$address'",5);
+				</php>
+				<volist name="lists['posts']" id="vo">
+				<php>
+					$smeta=json_decode($vo['smeta'], true);
+				</php>
+					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+				<div class="list-boxes">
+				<div class="list-act-img">
+				 <if condition="!empty($smeta['thumb'])">
+					<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" alt="{$vo.post_title}">
+					<else />
+				</if>
+				</div>
+				<div class="list-act-r">
+					<h2>{$vo.post_title}<span class="meta">{:date('Y/m/d',strtotime($vo['post_date']))}</span></h2>
+					<p>{$vo.post_excerpt}</p>
+					 
+					<div class="act-icons-time">
+						<span class="color1">查看详情</span>
+						 
+					</div>
+				 </div>
+				</div>
+				</a>
+				</volist>
+				
+			</div>
+			<div class="pagination"><ul>{$lists['page']}</ul></div>
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+</body>
+</html>

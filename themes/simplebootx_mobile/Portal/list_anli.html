@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$name} {$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+	</head>
+<body>
+<tc_include file="Public:navhead"/>
+<div class="w1200 mtb50 clear">
+<div class="mgl-hlbj">
+	<ul>
+		<volist name=":SidTypes(5)" id="vo">
+	     		<li <if condition="$vo.label eq $name">class="active"</if>><a href="{$vo.href}" >{$vo.label}</a></li>
+	      		</volist>
+
+	</ul>
+</div>
+<div class="anlist-con clear">
+<ul>
+<php>
+$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;where:postadderss='$address'",5);
+</php>
+<volist name="lists['posts']" id="vo">
+				<php>
+					$smeta=json_decode($vo['smeta'], true);
+					$photo = $smeta[photo];
+				</php>
+				<li>
+					<div class="allist-l">
+						<h1>{$vo.post_title}</h1>
+							<div class="list-anli-img">
+				 <if condition="!empty($smeta['thumb'])">
+					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}"><img src="{:sp_get_asset_upload_path($smeta['thumb'])}" alt="{$vo.post_title}">
+					</a>
+					<else />
+				</if>
+				</div>
+				<p>{$vo.post_excerpt}</p>
+				<div class="anli-btngroups">
+					<button class="yuyueclick">预约看馆</button>
+					<button class="yuyueclick">免费咨询</button>
+				</div>
+					</div>
+		 
+				</li>
+</volist>	
+</ul>
+
+</div>
+ <div class="pagination"><ul>{$lists['page']}</ul></div>
+			
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+<tc_include file="Public:yuyue"/>
+</body>
+</html>
+<script type="text/javascript">
+	$('.yuyueclick').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-yuyue').show();
+ });
+    $('.fixed-close').click(function(){
+ 	$(this).parents('.fixed-wapper').hide();
+    $('#index-bg-fixed').hide();
+  });
+  function addpost(postname){   
+	  switch(postname)
+		{
+		case 'yuyue':
+		$('#yy-errormessage').text('');
+		if(!$('#index-yuyue input[name=uname]').val()){
+			$('#yy-errormessage').text('姓名不能为空!');
+			return false;
+		}
+		if(!$('#index-yuyue input[name=utel]').val()){
+			$('#yy-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		var postdata={
+			full_name:$('#index-yuyue input[name=uname]').val(),
+			address:$('#index-yuyue select[name=address]').val(),
+			number:$('#index-yuyue select[name=number]').val(),
+			tel:$('#index-yuyue input[name=utel]').val(),
+			from:postname
+
+		}
+		ajaxpost(postdata);		   
+		break;
+		case 'address':
+		$('#address-errormessage').text('');
+		if(!$('#index-address input[name=phone]').val()){
+			$('#address-errormessage').text('手机号不能为空!');
+			return false;
+		}	
+		var postdata={
+			address:$('#index-address select[name=address]').val(),
+			tel:$('#index-address input[name=phone]').val(),
+			from:postname
+
+		}
+		ajaxpost(postdata);		
+		  break;
+		  case 'date':
+		  $('#date-errormessage').text('');
+		  if(!$('#index-dangqi input[name=utel]').val()){
+			$('#date-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		if(!$('#index-dangqi input[name=datetime]').val()){
+			$('#date-errormessage').text('请选择日期!');
+			return false;
+		}
+		var postdata={
+			address:$('#index-dangqi select[name=address]').val(),
+			datetime:$('#index-dangqi input[name=datetime]').val(),
+			tel:$('#index-dangqi input[name=utel]').val(),
+			from:postname
+
+		}
+		ajaxpost(postdata);	
+		   break;
+		default:
+		  break;
+		}    
+          
+ }
+ function ajaxpost(data){
+ 	  $.ajax({
+            url:"{:U('user/center/indexformadd')}",
+            type:"POST",
+            data:data,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                alert('提交成功!');                                                            
+                }else{
+                    alert(data.info);
+                }
+                 location.reload();
+
+            },
+        }); 
+ }
+ 
+</script>

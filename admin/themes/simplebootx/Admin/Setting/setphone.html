@@ -1,0 +1,44 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+		<!-- 	<li class="active"><a href="{:U('setting/setphone')}">添加手机号</a></li> -->
+			<li><a href="{:U('setting/phonelist')}">手机号列表</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form" method="post" action="{:U('setting/phone_post')}">
+			<fieldset>
+			 <input type="hidden" name="id" value="{$id}">
+			<div class="control-group">
+					<label class="control-label" for="address">地址名称</label>
+					<div class="controls">
+					<php>$getaddress=sp_getaddress();
+	 
+</php>
+					<select  id="address" name="address" disabled="">
+					<foreach name="getaddress" item="vo">
+<if condition="$vo.address eq $address">
+				<option value="{$vo.address}" selected="">{$vo.address}</option>
+				<else /><option value="{$vo.address}" >{$vo.address}</option>
+				</if>
+	
+</foreach>
+					</select>
+						 
+					</div>
+				</div>	
+				<div class="control-group">
+					<label class="control-label" for="phone">手机号</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="phone" name="phone" value="{$phone}">
+					</div>
+				</div>			 
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary  js-ajax-submit">{:L('SAVE')}</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

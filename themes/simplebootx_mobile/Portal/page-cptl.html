@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+		<tc_include file="Public:head" />
+    	<link rel="stylesheet" href="/css/swiper3.0.min.css">
+		</head>
+<body>
+<tc_include file="Public:topheader"/>
+<div class="w1200 clear">
+<div class="mgl-hlbj">
+	<ul>
+		<volist name=":SidTypes(4)" id="vo">
+	     		<li <if condition="$vo.label eq $post_title">class="active"</if>><a href="{$vo.href}" >{$vo.label}</a></li>
+	      		</volist>
+
+	</ul>
+</div>
+<div id="article_cptl_content">
+<div class="swiper-container" id="cptl-swiper">
+        <div class="swiper-wrapper">		           
+		 {$post_content}         
+            </div>
+ 		 <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+    </div>
+
+       
+        
+    </div>
+</div>
+ 
+
+ </div>
+ 
+</div>
+<tc_include file="Public:footer"/>
+<tc_include file="Public:scripts"/> 
+ <script src="/js/swiper3.0.js"></script>
+ <script>
+    var swiper = new Swiper('#cptl-swiper', {
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        speed: 600,
+    });
+    </script>
+</body>
+</html>

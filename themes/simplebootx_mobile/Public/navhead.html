@@ -1,0 +1,49 @@
+<div class="logo-wap-top">
+	<a href="/"><img src="/images/logo.png"></a>
+</div>
+<div  id="center-login">
+	<php>$getaddress=sp_getaddress();
+	if(isset($_SESSION['address'])){
+		$address=$_SESSION['address'];
+	}else{
+		$address=$getaddress[0]['address'];
+	}
+</php>
+<select name="navaddress" id="navaddress">
+<foreach name="getaddress" item="vo">
+<if condition="$vo.address eq $address">
+				<option value="{$vo.address}" selected="">{$vo.address}</option>
+				<else /><option value="{$vo.address}" >{$vo.address}</option>
+				</if>
+	
+</foreach>
+ </select>
+<span class="login"><a href="{:U('user/center/index')}">个人中心</a><a href="{:U('user/index/logout')}">退出</a> </span>
+<span class="offline"><a href="{:leuu('user/login/index')}">登录</a>|<a href="{:leuu('user/register/index')}">注册</a></span>
+<span>
+<?php    if($_SESSION["mainnav"]==1){
+				echo '<a href="/index.php?g=&m=index&a=swmain">玫瑰里·商务</a>';	
+		    }else{
+		    	echo '<a href="/index.php?g=&m=index&a=main">玫瑰里·婚礼</a>';	
+		    }
+		?>
+		</span>
+</div>
+<div class="nav-header">
+	<?php
+			$effected_id="main-menu";
+		  	$filetpl="<a href='\$href' target='\$target'  data-cid='\$cid'>\$label</a>";
+		  	$foldertpl="<a href='\$href' target='\$target'  data-cid='\$cid'>\$label </a>";
+		  	$ul_class="dropdown-menu" ;
+		  	$li_class="" ;
+		  	$style="nav";
+		  	$showlevel=6;
+		  	$dropdown='dropdown';
+		    if($_SESSION["mainnav"]==2){
+				echo sp_get_menu(2,$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);	
+		    }else{
+		    	echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);	
+		    }
+		?>
+</div>
+ 

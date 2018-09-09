@@ -1,0 +1,83 @@
+﻿<div id="index-bg-fixed">
+</div>
+<!-- 快速预约 -->
+<div class="fixed-wapper" id="index-yuyue">
+<div class="fixed-content">
+<div class="fixed-logo"><img src="/images/index-fixed-logo.png"></div>
+<div class="fixed-close">
+	<img src="/images/index-fixed-close.png">
+</div>
+<div class="form">
+<h1>快速预约</h1>
+	<p class="form-p">您选择的条件如下:</p>
+	<p class="select-p">选择地点<select name="address"><option>北京·太阳公元</option>
+	<option>上海·外滩</option>
+	<option>天津·爱琴海</option>
+	<option>南京·外秦淮</option>
+	<option>南京·1865</option>
+	</select> 
+	选择桌数<select name="number"><option>10桌以内</option>
+	<option>10-16桌</option>
+	<option>16桌以上</option>
+	</select>
+	</p>
+	<input type="text" name="uname" placeholder="请输入您的姓名">
+<input type="text" name="utel" placeholder="请输入您的手机号">
+<p class="red" id="yy-errormessage"></p>
+<button onclick="addpost('预约')">提交预约</button>
+</div>
+
+</div>
+</div>
+<!-- 发送地址 -->
+<div class="fixed-wapper" id="index-address">
+<div class="fixed-content">
+<div class="fixed-logo"><img src="/images/index-fixed-logo.png"></div>
+<div class="fixed-close">
+	<img src="/images/index-fixed-close.png">
+</div>
+<div class="form">
+	<p class="form-p">请选择门店</p>
+	<p class="select-big-p"><select name="address"><option>北京·太阳公元</option>
+	<option>上海·外滩</option>
+	<option>天津·爱琴海</option>
+	<option>南京·外秦淮</option>
+	<option>南京·1865</option>
+	</select> 	
+	</p>
+	<p class="form-p">请输入您的手机号</p>
+<input type="text" name="phone" placeholder="请输入您的手机号">
+<p class="red" id="address-errormessage"></p>
+<button onclick="addpost('地址')">发送地址</button>
+</div>
+
+</div>
+</div>
+<!-- 查询档期 -->
+<div class="fixed-wapper" id="index-dangqi">
+<div class="fixed-content">
+<div class="fixed-logo"><img src="/images/index-fixed-logo.png"></div>
+<div class="fixed-close">
+	<img src="/images/index-fixed-close.png">
+</div>
+<div class="form">
+<h1>查询档期</h1>
+	
+	<p class="select-p-big">请选择门店<select name="address"><option>北京·太阳公元</option>
+	<option>上海·外滩</option>
+	<option>天津·爱琴海</option>
+	<option>南京·外秦淮</option>
+	<option>南京·1865</option>
+	</select> 
+	</p>
+	<p class="form-p">请选择日期</p>
+	<input type="text" name="datetime" placeholder="请选择日期" readonly="" id="checkdatetime">
+	<p class="form-p">请输入您的手机号</p>
+<input type="text" name="utel" placeholder="请输入您的手机号">
+<p class="red" id="date-errormessage"></p>
+<button onclick="addpost('日期')">提交预约</button>
+</div>
+
+</div>
+</div>
+ 
