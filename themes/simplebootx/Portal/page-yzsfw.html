@@ -10,9 +10,16 @@
 <tc_include file="Public:topheader"/>
 <div class="w1200 clear">
 <div id="article_content">
- {$post_content}
+	<php>
+		if ($_SESSION["mainnav"] == 1) {
+			$id = 5;
+		} else {
+			$id = 136;
+		}
+		$page = sp_sql_page($id);
+	</php>
  </div>
- 
+ {$page.post_content}
 </div>
 <tc_include file="Public:footer"/>
 <tc_include file="Public:scripts"/> 

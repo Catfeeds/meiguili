@@ -1,7 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55c1a024-1452-4b92-8d74-4efd65b90fdb" name="Default" comment="" />
+    <list default="true" id="55c1a024-1452-4b92-8d74-4efd65b90fdb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/Setting/site.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Admin/Setting/site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/14f39110225aa98f9efb6f2af8c5253a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/17c864e00f937e6528a86826c496ba3b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/4a8d4a03acfca2a45a2f43e55f5f838d.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/runtime/Cache/Admin/4a8d4a03acfca2a45a2f43e55f5f838d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/92f738679a8b52d9d9d6545eeacc3b7f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/9665658563526d6dce89c51549f3ef9a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/a18cc1ab515350a2b351d115057cdf47.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/cb4ffe7e836c352e35298e3b22235320.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/e10b2ca56d65681999e1091fd0ff073e.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/e4800ef907456a497d40067dfc01e91a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Admin/ed9e50b199c6f1799df02480e8584135.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Asset/3e91d63013b043f2c1cded3a4d539edb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Indexyuyue/ea0bceda956be3587a3b5e359ae13f59.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/145a91ec9f45030f1dd88c6740d3a07a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/169d8682360e8a0ee2f840d23565ad14.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/1e64d2e20c0495371015592e34ed755b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/29050814819e09c35e230139d2a8c487.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/2b701b3c4e36dfb2565d0d69b29b64b0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/2bf2741b9e20659f8169077716850750.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/2e7a9c67a62bfe9047033fd47cd6c6dc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/2e82116afacb8e8b24cb4d4d6e967389.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/2f4e921544ed624b7c68363babc28a8e.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/34347c598f2c62b660500135850b12e5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/3b425d236109f852c15a7ff4df848263.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/5083009d27e056fc58a4f1c04fed0447.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/536abca7add05989f30191660b568c08.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/553541ba4488c95dd7fff9b76b8fe5ed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/577b3b0ac20f054ecb5eb1a2df338d33.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/62cc06017efc391fd62a7fc36cb259f9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/727b32fdaa8381882e8355b0d12ac0a5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/742bf46b1414a2111a25b70caf316eec.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/77918b69de8500402872de34e9bd5491.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/9009e7b378d9fe06bc981fff0f8bf09c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/91406a5f052c3da8d6c39b33e7f32c8e.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/94129f3907a26fafb1455432bfe5eae4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/a584594639ebaa4d7ad887eb013747e1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/a63309d2cb1e4ca84bbd1f4d76c5c22b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/a8ebb879fecc323f0dd1ceca6ebf6cf6.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/b38d1014a632cf5d5e26dc69ef89f859.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/b8de15f952856992d8981cdaf9c64af6.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/c02f4a69218cf286473fbc823cd66acb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/c80ecf04d48bcedff558a66d900c7d37.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/ce2168e688ef4bf63f58f788a8cec9a4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/e23633fd0443e7f015faa80fb0368f6f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/e8f30ea5555aca502410870c19f2680b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/ea678f16114d3f75245e5bd709581931.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/eb74f845c071735f2acf2f697c9d8b00.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/ee735a9b03efc459110f49d416145d9c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/ef593904e054b8009a731864becfd101.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/f3ab625b72ec9f59b956f9c1579bddb3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/Portal/f83074c1b211e8354c2f5b0287f29af3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/User/ac6f3f9af6fecafa0c343ce455a3f137.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Cache/User/afa211ebc6dab9973f5ce6423fdb23bc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Data/Menu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Data/all_terms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Data/routes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Data/site_nav_2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Data/site_nav_main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Data/site_options.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Logs/Admin/18_09_09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Logs/Indexyuyue/18_09_09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Logs/Portal/18_09_09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/runtime/Logs/User/18_09_09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list-hlcg.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list-hlcg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_anli.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_anli.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_anli_sw.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_anli_sw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_dsj.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_dsj.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_masonry.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_masonry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_newact.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_newact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu_sw.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu_sw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/page-yzsfw.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/page-yzsfw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Public/navhead.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/navhead.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/simplebootx/Public/topheader.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/simplebootx/Public/topheader.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,57 +90,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="topheader.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="topheader.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/topheader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="544">
+              <caret line="32" column="70" lean-forward="true" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swmain.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html">
+      <file leaf-file-name="navhead.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/navhead.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/main.html">
+      <file leaf-file-name="site.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Admin/Setting/site.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swmain.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/swmain.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navhead.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Public/navhead.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mmain.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/mmain.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="187" column="108" selection-start-line="187" selection-start-column="97" selection-end-line="187" selection-end-column="108" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,11 +141,19 @@
       <find>class=&quot;list-title&quot;</find>
       <find>list-boxes</find>
       <find>mgl-hlbj</find>
+      <find>order:</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
     <dirStrings>
       <dir>F:\www\meiguili</dir>
       <dir>F:\www\meiguili\themes\simplebootx_mobile\Portal</dir>
+      <dir>F:\www\meiguili\themes\simplebootx\Portal</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -95,19 +164,31 @@
         <option value="$PROJECT_DIR$/themes/simplebootx_mobile/Public/header.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx_mobile/Portal/page-cdxq.html" />
         <option value="$PROJECT_DIR$/css/mcommon.css" />
-        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="F:/qq/3482236604/FileRecv/玫瑰里.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx_mobile/Portal/index.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx/Portal/page-cptl.html" />
-        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/main.html" />
         <option value="$PROJECT_DIR$/data/conf/db.php" />
-        <option value="$PROJECT_DIR$/themes/simplebootx/Public/navhead.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx_mobile/Public/navhead.html" />
         <option value="$PROJECT_DIR$/css/mmain.css" />
         <option value="$PROJECT_DIR$/themes/simplebootx_mobile/Portal/main.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx_mobile/Portal/swmain.html" />
         <option value="$PROJECT_DIR$/themes/simplebootx/Public/topheader.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/page-yzsfw.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/page.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_anli.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_dsj.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list-hlcg.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_anli_sw.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_masonry.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/main.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_newact.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu_sw.html" />
+        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Admin/Setting/site.html" />
+        <option value="$PROJECT_DIR$/themes/simplebootx/Public/navhead.html" />
       </list>
     </option>
   </component>
@@ -128,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,16 +250,7 @@
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Menu" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="meiguili" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meiguili" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="simplebootx" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Nav" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Setting" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="meiguili" type="b2602c69:ProjectViewProjectNode" />
@@ -284,7 +357,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,33 +388,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536453260099</updated>
-      <workItem from="1536453261473" duration="22445000" />
+      <workItem from="1536453261473" duration="23045000" />
+      <workItem from="1536539239334" duration="8686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22445000" />
+    <option name="totallyTimeSpent" value="31731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -355,6 +428,48 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/topheader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/swmain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Public/navhead.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mmain.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simplewind/Core/Library/Think/Think.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -423,26 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Public/header.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Admin/Nav/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/list.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/page-cptl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/page-cdxq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -474,24 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_anli_sw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_anli.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/scripts.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://F:/qq/3482236604/FileRecv/玫瑰里.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="88" column="34" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -509,9 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#a#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -522,20 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/conf/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -543,36 +611,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/navhead.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Public/swnavhead.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Public/topheader.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mmain.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
+        <state relative-caret-position="1071">
           <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/main.html">
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/swmain.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/swmain.html">
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx_mobile/Portal/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="255">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
@@ -584,17 +639,142 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/page-cdxq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/page-yzsfw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_anli.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_dsj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list-hlcg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_anli_sw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu_sw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/swmain.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        <state relative-caret-position="289">
+          <caret line="143" column="62" selection-start-line="143" selection-start-column="62" selection-end-line="143" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_masonry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_shilu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_yy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list_newact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="147" column="61" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Portal/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/topheader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="544">
+          <caret line="32" column="70" lean-forward="true" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Admin/Setting/site.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="187" column="108" selection-start-line="187" selection-start-column="97" selection-end-line="187" selection-end-column="108" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#body#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/simplebootx/Public/navhead.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>

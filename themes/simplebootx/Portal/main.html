@@ -41,7 +41,7 @@
     <div class="index-cghl clear">
         <ul>
             <php>
-                $lists = sp_sql_posts_paged("cid:1;order:post_date DESC;where:postadderss='$address'",3);
+                $lists = sp_sql_posts_paged("cid:1;order:listorder DESC;where:postadderss='$address'",3);
             </php>
             <volist name="lists['posts']" id="vo">
                 <php>
@@ -79,7 +79,7 @@
                 <ul class="swiper-slide">
                     <php>
 
-                        $lists = sp_sql_posts_paged_index("cid:9;order:post_date
+                        $lists = sp_sql_posts_paged_index("cid:9;order:listorder
                         DESC;limit:0,3;where:postadderss='$address'",3);
                     </php>
                     <volist name="lists['posts']" id="vo">
@@ -106,7 +106,7 @@
                 </ul>
                 <ul class="swiper-slide">
                     <php>
-                        $lists = sp_sql_posts_paged_index("cid:9;order:post_date
+                        $lists = sp_sql_posts_paged_index("cid:9;order:listorder
                         DESC;limit:4,6;where:postadderss='$address'",3);
                     </php>
                     <volist name="lists['posts']" id="vo">
@@ -145,7 +145,7 @@
     <div class="index-hlsl clear">
         <ul class="swiper-slide">
             <php>
-                $lists = sp_sql_posts_paged("cid:19,20;order:post_date DESC;where:postadderss='$address'",3);
+                $lists = sp_sql_posts_paged("cid:19,20;order:listorder DESC;where:postadderss='$address'",3);
 
             </php>
             <volist name="lists['posts']" id="vo">

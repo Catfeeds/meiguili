@@ -10,6 +10,7 @@
 			<li><a href="#D" data-toggle="tab">{:L('UCENTER_SETTING')}</a></li>
 			<!-- <li><a href="#E" data-toggle="tab">{:L('COMMENT_SETTING')}</a></li> -->
 			<li><a href="#F" data-toggle="tab">{:L("USERNAME_FILTER")}</a></li>
+			<li><a href="#G" data-toggle="tab">各城市客服代码添加</a></li>
 		</ul>
 		<form class="form-horizontal js-ajax-forms" action="{:U('setting/site_post')}" method="post">
 			<fieldset>
@@ -179,12 +180,36 @@
 								</div>
 							</fieldset>
 						</div>
-						<div class="tab-pane" id="F">
+						<div class="tab-pane" id="G">
 							<fieldset>
 								<div class="control-group">
-									<label class="control-label">{:L('SPECAIL_USERNAME')}</label>
+									<label class="control-label">北京客服：</label>
 									<div class="controls">
-										<textarea name="cmf_settings[banned_usernames]" rows="5" cols="57">{$cmf_settings.banned_usernames}</textarea>
+										<textarea name="options[site_bj_kf]" rows="5" cols="57">{$site_bj_kf}</textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">上海客服：</label>
+									<div class="controls">
+										<textarea name="options[site_sh_kf]" rows="5" cols="57">{$site_sh_kf}</textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">天津客服:</label>
+									<div class="controls">
+										<textarea name="options[site_tj_kf]" rows="5" cols="57">{$site_tj_kf}</textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">南京·外秦淮客服:</label>
+									<div class="controls">
+										<textarea name="options[site_njwq_kf]" rows="5" cols="57">{$site_njwq_kf}</textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">南京·1865客服:</label>
+									<div class="controls">
+										<textarea name="options[site_nj_kf]" rows="5" cols="57">{$site_nj_kf}</textarea>
 									</div>
 								</div>
 							</fieldset>

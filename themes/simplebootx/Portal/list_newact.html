@@ -13,10 +13,10 @@
 	<div class="list-activity">
 				<php>
 				 if($_SESSION["mainnav"]==2){
-				 $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;where:type='商务' and postadderss='$address'",5);
+				 $lists = sp_sql_posts_paged("cid:$cat_id;order:listorder DESC;where:type='商务' and postadderss='$address'",5);
 					 
 		         }else{
-		    		$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;where:type='婚礼' and postadderss='$address'",5);		    	 
+		    		$lists = sp_sql_posts_paged("cid:$cat_id;order:listorder DESC;where:type='婚礼' and postadderss='$address'",5);
 		        }
 					
 				</php>

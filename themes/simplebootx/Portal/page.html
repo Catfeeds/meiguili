@@ -18,11 +18,31 @@
 		    </ul>
 </div>
 <div class="about-right">
-<h2>{$post_title}</h2>
+<h2>
+	<php>
+		if ($id ==4 or $id == 137) {
+			echo substr($post_title,10);
+		} else {
+			echo $post_title;
+		}
+	</php>
+</h2>
 		     
-		    	<div id="article_content">
-		    	{$post_content}
-		    	</div>
+<div id="article_content">
+	<php>
+		if ($id == 4) {
+			if ($_SESSION['mainnav'] == 1) {
+				$pages = sp_sql_page(4);
+			} else {
+				$pages = sp_sql_page(137);
+			}
+			echo $pages['post_content'];
+		} else {
+			echo $post_content;
+		}
+	</php>
+
+</div>
 </div>
 </div>
 <tc_include file="Public:footer"/>

@@ -32,6 +32,7 @@
     <script src="/js/zane-calendar.js"></script>
 </head>
 <body>
+<?php if ($_SESSION['address'] == '北京·太阳公元') { echo $site_bj_kf; } elseif ($_SESSION['address'] == '上海·外滩') { echo $site_sh_kf; } elseif ($_SESSION['address'] == '天津·爱琴海') { echo $site_tj_kf; } elseif ($_SESSION['address'] == '南京·外秦淮') { echo $site_njwq_kf; } elseif ($_SESSION['address'] == '南京·1865') { echo $site_nj_kf; } ?>
 <div class="navheader">
 	<div class="w1200 clear">
 		<div class="pright" id="center-login">
@@ -65,7 +66,7 @@
 	 
        
  <div class="clear"></div>
-<?php if ($_SESSION['address'] == '北京·太阳公元') { $biao = "mgl-banner"; } elseif ($_SESSION['address'] == '上海·外滩') { $biao = "sh-banner"; } elseif ($_SESSION['address'] == '天津·爱琴海') { $biao = "tj-banner"; } elseif ($_SESSION['address'] == '南京·外秦淮') { $biao = "njwq-banner"; } elseif ($_SESSION['address'] == '南京·1865') { $biao = "nj-banner"; } echo $biao; $home_slides=sp_getslide($biao,$limit=5,$order = "listorder ASC"); ?>
+<?php if ($_SESSION["mainnav"] == 2) { if ($_SESSION['address'] == '北京·太阳公元') { $biao = "sw-mgl-banner"; } elseif ($_SESSION['address'] == '上海·外滩') { $biao = "sw-sh-banner"; } elseif ($_SESSION['address'] == '天津·爱琴海') { $biao = "sw-tj-banner"; } elseif ($_SESSION['address'] == '南京·外秦淮') { $biao = "sw-njwq-banner"; } elseif ($_SESSION['address'] == '南京·1865') { $biao = "sw-nj-banner"; } } else { if ($_SESSION['address'] == '北京·太阳公元') { $biao = "mgl-banner"; } elseif ($_SESSION['address'] == '上海·外滩') { $biao = "sh-banner"; } elseif ($_SESSION['address'] == '天津·爱琴海') { $biao = "tj-banner"; } elseif ($_SESSION['address'] == '南京·外秦淮') { $biao = "njwq-banner"; } elseif ($_SESSION['address'] == '南京·1865') { $biao = "nj-banner"; } } $home_slides=sp_getslide($biao,$limit=5,$order = "listorder ASC"); ?>
 
 <ul id="homeslider" class="unstyled">
     <?php if(is_array($home_slides)): foreach($home_slides as $key=>$vo): ?><li>
@@ -103,7 +104,7 @@
     </div>
     <div class="index-cghl clear">
         <ul>
-            <?php $lists = sp_sql_posts_paged("cid:1;order:post_date DESC;where:postadderss='$address'",3); ?>
+            <?php $lists = sp_sql_posts_paged("cid:1;order:listorder DESC;where:postadderss='$address'",3); ?>
             <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
                 <li>
                     <div class="aimg">
@@ -130,7 +131,7 @@
         <div class="swiper-container" id="hlsl-swiper">
             <div class="swiper-wrapper">
                 <ul class="swiper-slide">
-                    <?php $lists = sp_sql_posts_paged_index("cid:9;order:post_date
+                    <?php $lists = sp_sql_posts_paged_index("cid:9;order:listorder
                         DESC;limit:0,3;where:postadderss='$address'",3); ?>
                     <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
                         <li>
@@ -147,7 +148,7 @@
                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
                 <ul class="swiper-slide">
-                    <?php $lists = sp_sql_posts_paged_index("cid:9;order:post_date
+                    <?php $lists = sp_sql_posts_paged_index("cid:9;order:listorder
                         DESC;limit:4,6;where:postadderss='$address'",3); ?>
                     <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
                         <li>
@@ -176,7 +177,7 @@
     </div>
     <div class="index-hlsl clear">
         <ul class="swiper-slide">
-            <?php $lists = sp_sql_posts_paged("cid:19,20;order:post_date DESC;where:postadderss='$address'",3); ?>
+            <?php $lists = sp_sql_posts_paged("cid:19,20;order:listorder DESC;where:postadderss='$address'",3); ?>
             <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
                 <li>
                     <div class="aimg">

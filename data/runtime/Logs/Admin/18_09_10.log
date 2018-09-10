@@ -1,0 +1,16 @@
+[ 2018-09-10T11:28:50+08:00 ] 127.0.0.1 /index.php?g=Admin&m=setting&a=site_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001925s ]
+SQL: SHOW COLUMNS FROM `data_users` [ RunTime:0.0518s ]
+SQL: SELECT * FROM `data_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `data_options` [ RunTime:0.0309s ]
+NOTIC: [8192] Function create_function() is deprecated F:\www\meiguili\simplewind\Lib\Util\Dir.class.php 第 84 行.
+SQL: SELECT * FROM `data_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `data_options` SET `option_id`='2',`option_name`='site_options',`option_value`='{\"site_name\":\"\\u73ab\\u7470\\u91cc\",\"site_host\":\"http:\\/\\/www.lavin.com.cn\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"mobile_tpl_enabled\":\"1\",\"site_adminstyle\":\"bluesky\",\"site_icp\":\"\",\"site_admin_email\":\"mindasiy@sina.com\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"\",\"site_seo_keywords\":\" \",\"site_seo_description\":\" \",\"urlmode\":\"0\",\"html_suffix\":\"\",\"comment_time_interval\":60,\"site_bj_kf\":\"<SCRIPT LANGUAGE=\\\"JavaScript\\\" src=http:\\/\\/floatedu.tq.cn\\/floatcard?adminid=9795331&sort=0 ><\\/SCRIPT>\",\"site_sh_kf\":\"<SCRIPT LANGUAGE=\\\"JavaScript\\\" src=http:\\/\\/floatedu.tq.cn\\/floatcard?adminid=9795331&sort=4 ><\\/SCRIPT>\",\"site_tj_kf\":\"<SCRIPT LANGUAGE=\\\"JavaScript\\\" src=http:\\/\\/floatedu.tq.cn\\/floatcard?adminid=9795331&sort=3 ><\\/SCRIPT>\",\"site_njwq_kf\":\"\",\"site_nj_kf\":\"\"}' WHERE ( option_name='site_options' ) [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: cmf_settings F:\www\meiguili\application\Admin\Controller\SettingController.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `data_options` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `data_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `data_options` SET `option_name`='cmf_settings',`option_value`='{\"banned_usernames\":\"\"}' WHERE ( option_name='cmf_settings' ) [ RunTime:0.0001s ]
+
