@@ -11,18 +11,21 @@
 <div class="w1200 clear">
 <div class="mgl-hlbj">
 	<ul>
-		<volist name=":SidTypes(4)" id="vo">
-	     		<li <if condition="$vo.label eq $post_title">class="active"</if>><a href="{$vo.href}" >{$vo.label}</a></li>
-	      		</volist>
-
+        <if condition="$_SESSION['mainnav'] eq 1">
+            <volist name=":SidTypes(4)" id="vo">
+                <li <if condition="$vo.label eq $post_title">class="active"</if>><a href="{$vo.href}" >{$vo.label}</a></li>
+            </volist>
+        <else/>
+            <li class="active"><a href="/index.php?m=page&a=index$id=7" >菜单详情</a></li>
+        </if>
 	</ul>
 </div>
 <div id="article_content">
  {$pagecon}
  </div>
- 
+
 </div>
 <tc_include file="Public:footer"/>
-<tc_include file="Public:scripts"/> 
+<tc_include file="Public:scripts"/>
 </body>
 </html>

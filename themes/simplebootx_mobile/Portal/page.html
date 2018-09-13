@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>{$site_seo_title} {$site_name}</title>
-		<meta name="keywords" content="{$site_seo_keywords}" />
-		<meta name="description" content="{$site_seo_description}">
-		<tc_include file="Public:head" />
-	</head>
+<html>
+<head>
+    <title>{$site_seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$site_seo_keywords}"/>
+    <meta name="description" content="{$site_seo_description}">
+    <tc_include file="Public:head"/>
+</head>
 <body>
 <tc_include file="Public:topheader"/>
 <div class=" mtb50 clear">
-<div class="about-left">
-<h2><span>关于我们</span>About LAVIN</h2>
-<ul class="sublist_title">
-				<volist name=":findsnav(8)" id="vo">
-	     		<li <if condition="$vo.label eq $post_title">class="active"</if>><a href="{$vo.href}" >{$vo.label}</a></li>
-	      		</volist>
-		    </ul>
-</div>
-<div class="about-right">
-<h2>{$post_title}</h2>
-		     
-		    	<div id="article_content">
-		    	{$post_content}
-		    	</div>
-</div>
+    <div class="about-left">
+        <h2><span>关于我们</span>About LAVIN</h2>
+        <ul class="sublist_title">
+            <volist name=":findsnav(8)" id="vo">
+                <li
+                <if condition="$vo.label eq $post_title">class="active"</if>
+                ><a href="{$vo.href}">{$vo.label}</a></li>
+            </volist>
+        </ul>
+    </div>
+    <div class="about-right">
+        <h2>
+            <php>
+                if ($id ==4 or $id == 137) {
+                echo substr($post_title,10);
+                } else {
+                echo $post_title;
+                }
+            </php>
+        </h2>
+
+        <div id="article_content">
+            <php>
+                if ($id == 4) {
+                if ($_SESSION['mainnav'] == 1) {
+                $pages = sp_sql_page(4);
+                } else {
+                $pages = sp_sql_page(137);
+                }
+                echo $pages['post_content'];
+                } else {
+                echo $post_content;
+                }
+            </php>
+        </div>
+    </div>
 </div>
 <tc_include file="Public:footer"/>
-<tc_include file="Public:scripts"/> 
+<tc_include file="Public:scripts"/>
 </body>
 </html>

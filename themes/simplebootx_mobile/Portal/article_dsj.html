@@ -9,7 +9,7 @@
 	</head>
 <body>
 <tc_include file="Public:topheader"/>
-<div class="w1200 mtb50 clear">
+<div class="w1200 mtb50 clear anli-xiaozhi">
  <div class="list-title-dsj">{$post_title}</div>
  <div class="act-tips-dsj">
  <p><img src="/images/act-icons_01.png">发布时间:{:date('Y/m/d',strtotime($post_date))}</p>
@@ -58,7 +58,9 @@ $photo = $smeta[photo];
 </div>
  
 <div class="clear"></div>
-	<div class="comeback"><a href="/index.php?m=list&a=index&id={$term_id}">返回列表</a></div>
+<div class="anli-btngroups">
+	<a href="/index.php?m=list&a=index&id={$term_id}">返回列表</a>
+</div>
  	<div class="clear"></div>
  
 </div>

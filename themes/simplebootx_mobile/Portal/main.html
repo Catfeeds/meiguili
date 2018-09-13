@@ -42,7 +42,7 @@
 <div class="index-cghl clear">
     <ul>
         <php>
-            $lists = sp_sql_posts_paged("cid:1;order:post_date DESC;where:postadderss='$address'",3);
+            $lists = sp_sql_posts_paged("cid:1;order:listorder DESC;where:postadderss='$address'",3);
         </php>
         <volist name="lists['posts']" id="vo">
             <php>
@@ -50,7 +50,7 @@
             </php>
             <li>
                 <div class="aimg">
-                    <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+                    <a class="huang" href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
                         <if condition="!empty($smeta['thumb'])">
                             <img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
                             <else/>
@@ -72,15 +72,14 @@
     </ul>
 </div>
 <div class="index-title">
-    婚礼实录<a href="/index.php?m=list&a=index&id=10">查看更多>></a>
+    婚礼案例<a href="/index.php?m=list&a=index&id=9">查看更多>></a>
 </div>
 <div class="index-hlsl clear">
     <div class="swiper-container" id="hlsl-swiper">
         <div class="swiper-wrapper">
             <ul class="swiper-slide">
                 <php>
-
-                    $lists = sp_sql_posts_paged_index("cid:10;order:post_date
+                    $lists = sp_sql_posts_paged_index("cid:9;order:listorder
                     DESC;limit:0,1;where:postadderss='$address'",1);
                 </php>
                 <volist name="lists['posts']" id="vo">
@@ -107,8 +106,8 @@
             </ul>
             <ul class="swiper-slide">
                 <php>
-                    $lists = sp_sql_posts_paged_index("cid:10;order:post_date
-                    DESC;limit:2,3;where:postadderss='$address'",1);
+                    $lists = sp_sql_posts_paged_index("cid:9;order:listorder
+                    DESC;limit:1,1;where:postadderss='$address'",1);
                 </php>
                 <volist name="lists['posts']" id="vo">
                     <php>
@@ -125,11 +124,30 @@
                             </a>
                         </div>
                         <span>{$vo.post_title}</span>
-
-
                     </li>
-
-
+                </volist>
+            </ul>
+            <ul class="swiper-slide">
+                <php>
+                    $lists = sp_sql_posts_paged_index("cid:9;order:listorder
+                    DESC;limit:2,1;where:postadderss='$address'",1);
+                </php>
+                <volist name="lists['posts']" id="vo">
+                    <php>
+                        $smeta=json_decode($vo['smeta'], true);
+                    </php>
+                    <li>
+                        <div class="aimg">
+                            <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
+                                <if condition="!empty($smeta['thumb'])">
+                                    <img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
+                                    <else/>
+                                    <img src="/images/no-data.png">
+                                </if>
+                            </a>
+                        </div>
+                        <span>{$vo.post_title}</span>
+                    </li>
                 </volist>
             </ul>
 
@@ -144,9 +162,9 @@
     玫瑰里大事件<a href="/index.php?g=portal&m=list&a=index&id=19">查看更多>></a>
 </div>
 <div class="index-hlsl clear">
-    <ul class="swiper-slide">
+    <ul class="swiper-slides">
         <php>
-            $lists = sp_sql_posts_paged("cid:19,20;order:post_date DESC;where:postadderss='$address'",3);
+            $lists = sp_sql_posts_paged("cid:19,20;order:listorder DESC;where:postadderss='$address'",10);
 
         </php>
         <volist name="lists['posts']" id="vo">
@@ -156,13 +174,13 @@
             <li>
                 <div class="aimg">
                     <if condition="!empty($smeta['thumb'])">
-                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}">
+                        <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}"><img src="{:sp_get_asset_upload_path($smeta['thumb'])}"></a>
                         <else/>
                         <img src="/images/no-data.png">
                     </if>
                 </div>
                 <span>{$vo.post_title}</span>
-                <span> {$vo.post_date}</span>
+                <!--<span> {$vo.post_date}</span>-->
 
             </li>
 

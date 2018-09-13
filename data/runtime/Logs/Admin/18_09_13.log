@@ -1,0 +1,11 @@
+[ 2018-09-13T11:10:23+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+SQL: SHOW COLUMNS FROM `data_users` [ RunTime:0.0224s ]
+SQL: SELECT * FROM `data_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `data_role_user` [ RunTime:0.0619s ]
+SQL: SELECT `role_id` FROM data_role_user a INNER JOIN data_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0219s ]
+SQL: UPDATE `data_users` SET `user_login`='admin',`user_pass`='###860d4a9905843a85391d8d05adef5748',`user_nicename`='admin',`user_email`='mindasiy@sina.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`=NULL,`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2018-09-13 11:10:23',`create_time`='2018-04-23 12:52:27',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0003s ]
+

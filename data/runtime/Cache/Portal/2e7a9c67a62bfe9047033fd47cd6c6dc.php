@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
-<html>
-<head>
-    <title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
-    <meta name="keywords" content="<?php echo ($site_seo_keywords); ?>"/>
-    <meta name="description" content="<?php echo ($site_seo_description); ?>">
-    	<?php  function _sp_helloworld(){ echo "hello 玫瑰里!"; } function _sp_helloworld2(){ echo "hello 玫瑰里2!"; } function _sp_helloworld3(){ echo "hello 玫瑰里3!"; } ?>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+	<html>
+	<head>
+		<title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
+		<meta name="keywords" content="<?php echo ($site_seo_keywords); ?>" />
+		<meta name="description" content="<?php echo ($site_seo_description); ?>">
+			<?php  function _sp_helloworld(){ echo "hello 玫瑰里!"; } function _sp_helloworld2(){ echo "hello 玫瑰里2!"; } function _sp_helloworld3(){ echo "hello 玫瑰里3!"; } ?>
 	<?php $portal_index_lastnews="2"; $portal_hot_articles="1,2"; $portal_last_post="1,2"; $tmpl=sp_get_theme_path(); $default_home_slides=array( array( "slide_name"=>"玫瑰里X2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/1.jpg", "slide_url"=>"", ), array( "slide_name"=>"玫瑰里X2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/2.jpg", "slide_url"=>"", ), array( "slide_name"=>"玫瑰里X2.1.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/3.jpg", "slide_url"=>"", ), ); ?>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,10 +27,10 @@
 	<link href="/css/common.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
     <link media="screen and (min-device-width:320px) and (max-device-width:400px)" rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/swiper3.0.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/zane-calendar.css">
-    <script src="/js/zane-calendar.js"></script>
-</head>
+		<link rel="stylesheet" href="/css/swiper3.0.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/zane-calendar.css">
+		<script src="/js/zane-calendar.js"></script>
+	</head>
 <body>
 <?php if ($_SESSION['address'] == '北京·太阳公元') { echo $site_bj_kf; } elseif ($_SESSION['address'] == '上海·外滩') { echo $site_sh_kf; } elseif ($_SESSION['address'] == '天津·爱琴海') { echo $site_tj_kf; } elseif ($_SESSION['address'] == '南京·外秦淮') { echo $site_njwq_kf; } elseif ($_SESSION['address'] == '南京·1865') { echo $site_nj_kf; } else { echo $site_bj_kf; } ?>
 <div class="navheader">
@@ -76,167 +76,160 @@
 
 <div class="clear"></div>
 <div class="w1200 clear">
-    <div class="index-partone clear">
-        <div class="yugu">
-            <img src="/images/yugu.png" alt="">
-        </div>
-        <div class="index-partone-03">
-            <div class="index-partone-03-r">
-                <img src="/images/index-06.png" id="yuyueclick">
-            </div>
-        </div>
-        <div class="index-partone-04">
-            <ul>
-                <li class="line" id="addressclick">
-                    <img src="/images/index-04.png">
-                    <p>发送地址</p>
-                </li>
-                <li id="dateselect">
-                    <img src="/images/index-05.png">
-                    <p>查询档期</p>
-                </li>
-            </ul>
-        </div>
-    </div>
+	<div class="index-partone clear">
+		<div class="yugu">
+			<img src="/images/yugu.png" alt="">
+		</div>
+		<div class="index-partone-03">
+			<div class="index-partone-03-r">
+				<img src="/images/index-06.png" id="yuyueclick">
+			</div>
+		</div>
+		<div class="index-partone-04">
+			<ul>
+				<li class="line" id="addressclick">
+					<img src="/images/index-04.png" >
+					<p>发送地址</p>
+				</li>
+				<li id="dateselect">
+					<img src="/images/index-05.png" >
+					<p>查询档期</p>
+				</li>
+			</ul>
+		</div>
+	</div>
 
-    <div class="index-title">
-        婚礼馆场<a href="/index.php?m=list&a=index&id=1">查看更多>></a>
-    </div>
-    <div class="index-cghl clear">
-        <ul>
-            <?php $lists = sp_sql_posts_paged("cid:1;order:listorder DESC;where:postadderss='$address'",3); ?>
-            <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
-                <li>
-                    <div class="aimg">
-                        <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
-                            <?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
-                                <?php else: ?>
-                                <img src="/images/no-data.png"><?php endif; ?>
-                        </a>
-                        <span><?php echo ($vo["post_title"]); ?></span>
-
-                    </div>
-                    <p class="class1">优惠:<?php echo ($vo["youhui"]); ?></p>
-                    <p class="class2">特色:<?php echo ($vo["tese"]); ?></p>
-                    <p class="class3">场地价格:<?php echo ($vo["jiage"]); ?></p>
-                    <p class="class4">容纳桌数:<?php echo ($vo["zhuoshu"]); ?></p>
-                    <a href="javascript:;" class="clear yuyueclick">预约看馆</a>
-                </li><?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
-    </div>
-    <div class="index-title">
-        婚礼案例<a href="/index.php?m=list&a=index&id=9">查看更多>></a>
-    </div>
-    <div class="index-hlsl clear">
-        <div class="swiper-container" id="hlsl-swiper">
-            <div class="swiper-wrapper">
-                <ul class="swiper-slide">
-                    <?php $lists = sp_sql_posts_paged_index("cid:9;order:listorder
-                        DESC;limit:0,3;where:postadderss='$address'",3); ?>
-                    <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
-                        <li>
-                            <div class="aimg">
-                                <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
-                                    <?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
-                                        <?php else: ?>
-                                        <img src="/images/no-data.png"><?php endif; ?>
-                                </a>
-                            </div>
-                            <span><?php echo ($vo["post_title"]); ?></span>
-
-
-                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-                <ul class="swiper-slide">
-                    <?php $lists = sp_sql_posts_paged_index("cid:9;order:listorder
-                        DESC;limit:4,6;where:postadderss='$address'",3); ?>
-                    <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
-                        <li>
-                            <div class="aimg">
-                                <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
-                                    <?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
-                                        <?php else: ?>
-                                        <img src="/images/no-data.png"><?php endif; ?>
-                                </a>
-                            </div>
-                            <span><?php echo ($vo["post_title"]); ?></span>
-
-
-                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-
-            </div>
-
-            <div class="swiper-button-prev swiper-button-black"></div>
-            <div class="swiper-button-next swiper-button-black"></div>
-        </div>
-
-    </div>
-    <div class="index-title">
-        玫瑰里大事件<a href="/index.php?g=portal&m=list&a=index&id=19">查看更多>></a>
-    </div>
-    <div class="index-hlsl clear">
+<div class="index-title">
+商务馆场<a href="/index.php?m=list&a=index&id=11">查看更多>></a>
+</div>
+<div class="index-cghl clear">
+<ul>
+	<?php $lists = sp_sql_posts_paged("cid:11;order:listorder DESC;where:postadderss='$address'",3); ?>
+   <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
+<li>
+	<div class="aimg">
+	  <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
+	<?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
+								<?php else: ?>
+		<img src="/images/no-data.png"><?php endif; ?>
+ </a>
+	<span><?php echo ($vo["post_title"]); ?></span>
+	</div>
+	<p class="class1">优惠:<?php echo ($vo["youhui"]); ?></p>
+	<p class="class2">特色:<?php echo ($vo["tese"]); ?></p>
+	<p class="class3">场地价格:<?php echo ($vo["jiage"]); ?></p>
+	<p class="class4">容纳桌数:<?php echo ($vo["zhuoshu"]); ?></p>
+	<a href="javascript:;" class="clear yuyueclick">预约看馆</a>
+</li><?php endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+</div>
+<div class="index-title">
+商务案例<a href="/index.php?m=list&a=index&id=14">查看更多>></a>
+</div>
+<div class="index-hlsl clear">
+<div class="swiper-container" id="hlsl-swiper">
+        <div class="swiper-wrapper">
         <ul class="swiper-slide">
-            <?php $lists = sp_sql_posts_paged("cid:19,20;order:listorder DESC;where:postadderss='$address'",3); ?>
-            <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
-                <li>
-                    <div class="aimg">
-                        <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
-                            <?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
-                                <?php else: ?>
-                                <img src="/images/no-data.png"><?php endif; ?>
-                        </a>
-                    </div>
-                    <span><?php echo ($vo["post_title"]); ?></span>
+	<?php $lists = sp_sql_posts_paged_index("cid:14;order:listorder DESC;limit:0,3;where:postadderss='$address'",3); ?>
+ <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
+<li>
+	<div class="aimg">
+		 <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
+	<?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
+								<?php else: ?>
+		<img src="/images/no-data.png"><?php endif; ?>
+</a>
+	 </div>
+	<span><?php echo ($vo["post_title"]); ?></span>
 
 
-                </li><?php endforeach; endif; else: echo "" ;endif; ?>
+</li><?php endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+ <ul class="swiper-slide">
+	<?php $lists = sp_sql_posts_paged_index("cid:14;order:listorder DESC;limit:4,6;where:postadderss='$address'",3); ?>
+ <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
+<li>
+	<div class="aimg">
+		 <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
+	<?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
+								<?php else: ?>
+		<img src="/images/no-data.png"><?php endif; ?>
+</a>
+	 </div>
+	<span><?php echo ($vo["post_title"]); ?></span>
+
+
+</li><?php endforeach; endif; else: echo "" ;endif; ?>
+</ul>			           
+		           
+            </div>
+ 	
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+    </div>
+
+</div>
+<div class="index-title">
+玫瑰里大事件<a href="/index.php?g=portal&m=list&a=index&id=19">查看更多>></a>
+</div>
+<div class="index-hlsl clear">
+ <ul class="swiper-slide">
+	<?php $lists = sp_sql_posts_paged("cid:19,20;order:listorder DESC;;where:postadderss='$address'",3); ?>
+ <?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
+<li>
+	<div class="aimg">
+		 <a href="<?php echo leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']));?>">
+	<?php if(!empty($smeta['thumb'])): ?><img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>">
+								<?php else: ?>
+		<img src="/images/no-data.png"><?php endif; ?>
+</a>
+	 </div>
+	<span><?php echo ($vo["post_title"]); ?></span>
+
+
+</li><?php endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+
+</div>
+<a href="/index.php?m=page&a=index&id=4"><img src="/images/index-ad.png"></a>
+<div class="index-comment-title">
+<span>客户服务中心</span>
+</div>
+<div class="index-comment-con clear">
+<textarea name="msg" class="msg" placeholder="请输入评论"></textarea>
+<p class="red" id="msg-errormessage"></p>
+<div class="index-comment-con-bottom"><img src="/images/index-touxiang.png"><span>Cora</span><button onclick="postmsg()">发布</button></div>
+</div>
+<div class="comment-con">
+<h1>全部评论</h1>
+<ul>
+<?php if(is_array($commentlist)): foreach($commentlist as $key=>$vo): ?><li>
+	<div class="dimg">
+	 
+	<?php if(!empty($vo['avatar'])): ?><img src="<?php echo sp_get_user_avatar_url($vo['avatar']);?>">
+								<?php else: ?><img src="/images/index-touxiang-a.png"><?php endif; ?>
+		
+	</div>
+	<div class="comlist-r">
+	<h1><span><?php echo ($vo["user_nicename"]); ?></span> <?php echo ($vo["createtime"]); ?></h1>
+	<p><?php echo ($vo["msg"]); ?></p>
+	<p class="b-r"><a href="<?php echo U('index/do_like',array('id'=>$vo['id']));?>"><i class="fa fa-thumbs-o-up"></i><span class="count">(<?php echo ($vo["post_like"]); ?>)</span></a></p>
+	</div>
+</li>
+        <!-- <tr>
+        <td><?php echo ($vo["ccatcode"]); ?></td>
+        <td><?php echo ($vo["cname"]); ?></td>
+        <td><?php echo ($vo["name"]); ?></td>
+        <td><?php echo ($vo["part"]); ?></td>
+        <td><a href="<?php echo U('user/contact/doedit',array('id'=>$vo['id']));?>">修改</a> </td>
+        </tr> --><?php endforeach; endif; ?>
         </ul>
+</div>
 
-    </div>
-    <a href="/index.php?m=page&a=index&id=4"><img src="/images/index-ad.png"></a>
-    <div class="index-comment-title">
-        <span>客户服务中心</span>
-    </div>
-    <div class="index-comment-con clear">
-        <textarea name="msg" class="msg" placeholder="请输入评论"></textarea>
-        <p class="red" id="msg-errormessage"></p>
-        <div class="index-comment-con-bottom"><img src="/images/index-touxiang.png"><span>Cora</span>
-            <button onclick="postmsg()">发布</button>
-        </div>
-    </div>
-    <div class="comment-con">
-        <h1>全部评论</h1>
-        <ul>
-            <?php if(is_array($commentlist)): foreach($commentlist as $key=>$vo): ?><li>
-                    <div class="dimg">
-
-                        <?php if(!empty($vo['avatar'])): ?><img src="<?php echo sp_get_user_avatar_url($vo['avatar']);?>">
-                            <?php else: ?>
-                            <img src="/images/index-touxiang-a.png"><?php endif; ?>
-
-                    </div>
-                    <div class="comlist-r">
-                        <h1><span><?php echo ($vo["user_nicename"]); ?></span> <?php echo ($vo["createtime"]); ?></h1>
-                        <p><?php echo ($vo["msg"]); ?></p>
-                        <p class="b-r"><a href="<?php echo U('index/do_like',array('id'=>$vo['id']));?>"><i
-                                class="fa fa-thumbs-o-up"></i><span class="count">(<?php echo ($vo["post_like"]); ?>)</span></a></p>
-                    </div>
-                </li>
-                <!-- <tr>
-                <td><?php echo ($vo["ccatcode"]); ?></td>
-                <td><?php echo ($vo["cname"]); ?></td>
-                <td><?php echo ($vo["name"]); ?></td>
-                <td><?php echo ($vo["part"]); ?></td>
-                <td><a href="<?php echo U('user/contact/doedit',array('id'=>$vo['id']));?>">修改</a> </td>
-                </tr> --><?php endforeach; endif; ?>
-        </ul>
-    </div>
-
-    <div class="index-title clear">
-        品牌介绍<a href="/index.php?m=page&a=index&id=1">查看更多>></a>
-    </div>
-    <img src="/images/index-aboutad.png" class="mtb50">
+<div class="index-title clear">
+品牌介绍<a href="/index.php?m=page&a=index&id=3">查看更多>></a>
+</div>
+<img src="/images/index-aboutad.png" class="mtb50">
 </div>
 <div class="footer">
 <div class="w1200 clear">
@@ -493,138 +486,134 @@ var GV = {
 </html>
 <script src="/js/swiper3.0.js"></script>
 
-<script>
+ <script>
+ zaneDate({
+			elem:'#checkdatetime',
+			begintime:1514779932000,
+			format:'yyyy-MM-dd',
+			showtime:true
+		})
 
-    zaneDate({
-        elem: '#checkdatetime',
-        begintime: 1514779932000,
-        format: 'yyyy-MM-dd',
-        showtime: true
-    })
-    $('#yuyueclick,.yuyueclick').click(function () {
-        $('#index-bg-fixed').show();
-        $('#index-yuyue').show();
-    });
-    $('#addressclick').click(function () {
-        $('#index-bg-fixed').show();
-        $('#index-address').show();
-    });
-    $('#dateselect').click(function () {
-        $('#index-bg-fixed').show();
-        $('#index-dangqi').show();
-    });
-    $('.fixed-close').click(function () {
-        $(this).parents('.fixed-wapper').hide();
-        $('#index-bg-fixed').hide();
-    });
+ $('#yuyueclick,.yuyueclick').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-yuyue').show();
+ });
+  $('#addressclick').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-address').show();
+ });
+    $('#dateselect').click(function(){
+ 	 $('#index-bg-fixed').show();
+ 	 $('#index-dangqi').show();
+ });
+ $('.fixed-close').click(function(){
+ 	$(this).parents('.fixed-wapper').hide();
+    $('#index-bg-fixed').hide();
+  });
+  function addpost(postname){   
+	  switch(postname)
+		{
+		case '预约':
+		$('#yy-errormessage').text('');
+		if(!$('#index-yuyue input[name=uname]').val()){
+			$('#yy-errormessage').text('姓名不能为空!');
+			return false;
+		}
+		if(!$('#index-yuyue input[name=utel]').val()){
+			$('#yy-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		var postdata={
+			full_name:$('#index-yuyue input[name=uname]').val(),
+			address:$('#index-yuyue select[name=address]').val(),
+			number:$('#index-yuyue select[name=number]').val(),
+			tel:$('#index-yuyue input[name=utel]').val(),
+			from:'商务'+postname
 
-    function addpost(postname) {
-        switch (postname) {
-            case '预约':
-                $('#yy-errormessage').text('');
-                if (!$('#index-yuyue input[name=uname]').val()) {
-                    $('#yy-errormessage').text('姓名不能为空!');
-                    return false;
-                }
-                if (!$('#index-yuyue input[name=utel]').val()) {
-                    $('#yy-errormessage').text('手机号不能为空!');
-                    return false;
-                }
+		}
+		ajaxpost(postdata);		   
+		break;
+		case '地址':
+		$('#address-errormessage').text('');
+		if(!$('#index-address input[name=phone]').val()){
+			$('#address-errormessage').text('手机号不能为空!');
+			return false;
+		}	
+		var postdata={
+			address:$('#index-address select[name=address]').val(),
+			tel:$('#index-address input[name=phone]').val(),
+			from:'商务'+postname
 
-                var postdata = {
-                    full_name: $('#index-yuyue input[name=uname]').val(),
-                    address: $('#index-yuyue select[name=address]').val(),
-                    number: $('#index-yuyue select[name=number]').val(),
-                    tel: $('#index-yuyue input[name=utel]').val(),
-                    from: '婚礼' + postname
+		}
+		ajaxpost(postdata);		
+		  break;
+		  case '日期':
+		  $('#date-errormessage').text('');
+		  if(!$('#index-dangqi input[name=utel]').val()){
+			$('#date-errormessage').text('手机号不能为空!');
+			return false;
+		}
+		if(!$('#index-dangqi input[name=datetime]').val()){
+			$('#date-errormessage').text('请选择日期!');
+			return false;
+		}
+		var postdata={
+			address:$('#index-dangqi select[name=address]').val(),
+			datetime:$('#index-dangqi input[name=datetime]').val(),
+			tel:$('#index-dangqi input[name=utel]').val(),
+			from:'商务'+postname
 
-                }
-                ajaxpost(postdata);
-                break;
-            case '地址':
-                $('#address-errormessage').text('');
-                if (!$('#index-address input[name=phone]').val()) {
-                    $('#address-errormessage').text('手机号不能为空!');
-                    return false;
-                }
-                var postdata = {
-                    address: $('#index-address select[name=address]').val(),
-                    tel: $('#index-address input[name=phone]').val(),
-                    from: '婚礼' + postname
-
-                }
-                ajaxpost(postdata);
-                break;
-            case '日期':
-                $('#date-errormessage').text('');
-                if (!$('#index-dangqi input[name=utel]').val()) {
-                    $('#date-errormessage').text('手机号不能为空!');
-                    return false;
-                }
-                if (!$('#index-dangqi input[name=datetime]').val()) {
-                    $('#date-errormessage').text('请选择日期!');
-                    return false;
-                }
-                var postdata = {
-                    address: $('#index-dangqi select[name=address]').val(),
-                    datetime: $('#index-dangqi input[name=datetime]').val(),
-                    tel: $('#index-dangqi input[name=utel]').val(),
-                    from: '婚礼' + postname
-
-                }
-                ajaxpost(postdata);
-                break;
-            default:
-                break;
-        }
-
-    }
-
-    function ajaxpost(data) {
-        $.ajax({
-            url: "<?php echo U('index/indexformadd');?>",
-            type: "POST",
-            data: data,
-            dataType: "json",
-            success: function (data) {
-                if (data.status == 1) {
-                    alert('提交成功!');
-                } else {
+		}
+		ajaxpost(postdata);	
+		   break;
+		default:
+		  break;
+		}    
+          
+ }
+ function ajaxpost(data){
+ 	  $.ajax({
+            url:"<?php echo U('index/indexformadd');?>",
+            type:"POST",
+            data:data,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                alert('提交成功!');                                                            
+                }else{
                     alert(data.info);
                 }
-                location.reload();
+                 location.reload();
 
             },
-        });
-    }
-
-    function postmsg() {
-        var msg = $('.msg').val();
-        if (!msg) {
-            $('#msg-errormessage').text('评论内容不能为空!');
-            return false;
-        }
-        var data = {
-            msg: msg
-        }
-        $.ajax({
-            url: "<?php echo U('user/center/indexmsgadd');?>",
-            type: "POST",
-            data: data,
-            dataType: "json",
-            success: function (data) {
-                if (data.status == 1) {
-                    alert('提交成功!');
-                } else {
+        }); 
+ }
+ function postmsg(){
+ 	var msg= $('.msg').val();
+ 	if(!msg){
+ 		$('#msg-errormessage').text('评论内容不能为空!');
+		return false;
+ 	}
+ 	var  data={
+ 		msg:msg
+ 	}
+    $.ajax({
+            url:"<?php echo U('user/center/indexmsgadd');?>",
+            type:"POST",
+            data:data,
+            dataType:"json",
+            success:function(data){
+                if(data.status == 1){ 
+                alert('提交成功!');                                                            
+                }else{
                     alert(data.info);
                 }
-                location.reload();
+                 location.reload();
 
             },
-        });
+        }); 
 
-    }
-
+ }
     var swiper = new Swiper('#hlsl-swiper', {
         paginationClickable: true,
         nextButton: '.swiper-button-next',
@@ -632,4 +621,4 @@ var GV = {
         parallax: true,
         speed: 600,
     });
-</script>
+    </script>

@@ -1,70 +1,74 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>{$name} {$site_seo_title} {$site_name}</title>
-		<meta name="keywords" content="{$site_seo_keywords}" />
-		<meta name="description" content="{$site_seo_description}">
-		<tc_include file="Public:head" />
-	</head>
+<html>
+<head>
+    <title>{$name} {$site_seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$site_seo_keywords}"/>
+    <meta name="description" content="{$site_seo_description}">
+    <tc_include file="Public:head"/>
+</head>
 <body>
 <tc_include file="Public:navhead"/>
 <div class="w1200 mtb50 clear">
-<div class="list-title">玫瑰里实时活动</div>
-	<div class="list-activity clear">
-				<php>
-				 if($_SESSION["mainnav"]==2){
-				 $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;where:type='商务'",5);
-					 
-		         }else{
-		    		$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;where:type='婚礼'",5);		    	 
-		        }
-					
-				</php>
-				<volist name="lists['posts']" id="vo">
-				<php>
-					$smeta=json_decode($vo['smeta'], true);
-				</php>
+    <div class="list-title">玫瑰里实时活动</div>
+    <div class="list-activity clear">
+        <php>
+            if($_SESSION["mainnav"]==2){
+            $lists = sp_sql_posts_paged("cid:$cat_id;order:listorder DESC;where:type='商务' and postadderss='$address'",5);
 
-					 
-				<div class="list-boxes clear">
-				<div class="list-act-img">
-				 <if condition="!empty($smeta['thumb'])">
-					<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" alt="{$vo.post_title}">
-					<else />
-				</if>
-				</div>
-				<div class="list-act-r">
-					<h2>{$vo.post_title}<span class="meta">{:date('Y-m-d',strtotime($vo['post_date']))}</span></h2>
-					<p><img src="/images/act-icons_01.png">活动时间:{:date('Y/m/d',strtotime($vo['actstarttime']))}-{:date('Y/m/d',strtotime($vo['actendtime']))}</p>
-					<p><img src="/images/act-icons_03.png">报名人数:<span class="red">{$vo.newarc}</span>人</p>
-					<p><img src="/images/act-icons_05.png">人气指数:<span class="red">{$vo.post_hits}</span>次</p>
-					<div class="act-icons-time">
-				 
-				 <php> 
- 				$datatime=time(); //当前时间  
-				 $starttime=strtotime ($vo['actstarttime']);  
-				 $endtime=strtotime ($vo['actendtime']);  
-				 </php>  
-  <if condition="$datatime lt $starttime">
-					<span class="color2">活动未开始</span>
-					<elseif condition="$starttime lt $datatime &&$datatime lt $endtime"/>
-					<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}"><span class="color1">活动报名中</span>
-					</a>
-					<else />
-					<span class="color2">活动已结束</span>
-				</if>
-						 
-					</div>
-				 </div>
-				</div>
-				 
-				</volist>
-				
-			</div>
-			<div class="pagination"><ul>{$lists['page']}</ul></div>
- 
+            }else{
+            $lists = sp_sql_posts_paged("cid:$cat_id;order:listorder DESC;where:type='婚礼' and postadderss='$address'",5);
+            }
+
+        </php>
+        <volist name="lists['posts']" id="vo">
+            <php>
+                $smeta=json_decode($vo['smeta'], true);
+            </php>
+
+
+            <div class="list-boxes clear">
+                <div class="list-act-img">
+                    <if condition="!empty($smeta['thumb'])">
+                        <img src="{:sp_get_asset_upload_path($smeta['thumb'])}" alt="{$vo.post_title}">
+                        <else/>
+                    </if>
+                </div>
+                <div class="list-act-r">
+                    <h2>{$vo.post_title}<span class="meta">{:date('Y-m-d',strtotime($vo['post_date']))}</span></h2>
+                    <p><img src="/images/act-icons_01.png">活动时间:{:date('Y/m/d',strtotime($vo['actstarttime']))}-{:date('Y/m/d',strtotime($vo['actendtime']))}
+                    </p>
+                    <p><img src="/images/act-icons_03.png">报名人数:<span class="red">{$vo.newarc}</span>人</p>
+                    <p><img src="/images/act-icons_05.png">人气指数:<span class="red">{$vo.post_hits}</span>次</p>
+                    <div class="act-icons-time">
+
+                        <php>
+                            $datatime=time(); //当前时间
+                            $starttime=strtotime ($vo['actstarttime']);
+                            $endtime=strtotime ($vo['actendtime']);
+                        </php>
+                        <if condition="$datatime lt $starttime">
+                            <span class="color2">活动未开始</span>
+                            <elseif condition="$starttime lt $datatime &&$datatime lt $endtime"/>
+                            <a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}"><span
+                                    class="color1">活动报名中</span>
+                            </a>
+                            <else/>
+                            <span class="color2">活动已结束</span>
+                        </if>
+
+                    </div>
+                </div>
+            </div>
+
+        </volist>
+
+    </div>
+    <div class="pagination">
+        <ul>{$lists['page']}</ul>
+    </div>
+
 </div>
 <tc_include file="Public:footer"/>
-<tc_include file="Public:scripts"/> 
+<tc_include file="Public:scripts"/>
 </body>
 </html>
